@@ -34,7 +34,7 @@ public class p591 {
 				int counter = 0;
 				for (int i = 0; i < stacks.length; i++) {
 					if (stacks[i] > maxStack) {
-						counter += stacks[i] - maxStack; // E.g. if the stack size is 8 and maxStack is 3, counter += 5.
+						counter += stacks[i] - maxStack; // E.g. if the stack size is 8 and maxStack is 3, counter += 5 (we are removing 5 from the stack).
 					}
 				}
 				sb.append("Set #" + testCase++ + "\nThe minimum number of moves is " + counter + ".\n\n");

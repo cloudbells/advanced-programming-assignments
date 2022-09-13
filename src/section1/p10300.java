@@ -23,7 +23,7 @@ public class p10300 {
 				Farmer[] farmers = new Farmer[nbrOfFarmers];
 				for (int i = 0; i < nbrOfFarmers; i++) {
 					String[] values = stream.readLine().split(" ");
-					farmers[i] = new Farmer(Integer.parseInt(values[0]), Integer.parseInt(values[1]), Integer.parseInt(values[2]));
+					farmers[i] = new Farmer(Integer.parseInt(values[0]), Integer.parseInt(values[2]));
 				}
 				tests[count] = new TestCase(farmers);
 				count++;
@@ -59,45 +59,15 @@ public class p10300 {
 		public Farmer[] getFarmers() {
 			return farmers;
 		}
-		
-		public void setFarmers(Farmer[] farmers) {
-			this.farmers = farmers;
-		}
 	}
 	
 	private class Farmer {
 		
 		private int farmSize;
-		private int numberOfAnimals;
 		private int envFactor;
 		
-		public Farmer(int farmSize, int numberOfAnimals, int envFactor) {
+		public Farmer(int farmSize, int envFactor) {
 			this.farmSize = farmSize;
-			this.numberOfAnimals = numberOfAnimals;
-			this.envFactor = envFactor;
-		}
-		
-		public int getFarmSize() {
-			return farmSize;
-		}
-		
-		public int getNumberOfAnimals() {
-			return numberOfAnimals;
-		}
-		
-		public int getEnvFactor() {
-			return envFactor;
-		}
-		
-		public void setFarmSize(int farmSize) {
-			this.farmSize = farmSize;
-		}
-		
-		public void setNumberOfAnimals(int numberOfAnimals) {
-			this.numberOfAnimals = numberOfAnimals;
-		}
-		
-		public void setEnvFactor(int envFactor) {
 			this.envFactor = envFactor;
 		}
 	}

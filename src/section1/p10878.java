@@ -12,14 +12,13 @@ public class p10878 {
 	}
 	
 	private char parseLine(String line) {
-		// The input will be of the following form:
-		// |76543.210| where the position n has a value of 2^n.
+		// The input will be the following form: |76543.210| where the position n has a value of 2^n.
 		int value = 0;
-		line = line.replaceAll("[|\\.]", ""); // Resulting is 76543210
+		line = line.replaceAll("[|\\.]", ""); // Result is 76543210.
 		char[] chars = line.toCharArray();
 		for (int i = 0; i < chars.length; i++) {
 			if (chars[i] == 'o') {
-				value += Math.pow(2, (chars.length - 1) - i); // 2^(7-0) for i = 1, 2^(7-1) for i = 2, 2^(7-2) for i = 3, etc.
+				value += Math.pow(2, chars.length - 1 - i); // 2^(7-0) for i = 0, 2^(7-1) for i = 1, 2^(7-2) for i = 2, etc.
 			}
 		}
 		return (char) value;
