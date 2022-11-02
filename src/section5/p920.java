@@ -1,9 +1,9 @@
-package section3;
+package section5;
 
-public class p11054 {
+public class p920 {
 
 	public static void main(String[] args) {
-		p11054 obj = new p11054();
+		p920 obj = new p920();
 		obj.run();
 	}
 	

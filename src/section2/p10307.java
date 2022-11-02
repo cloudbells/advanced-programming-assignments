@@ -116,7 +116,6 @@ public class p10307 {
 		visited.add(1);
 		mst.add(1);
 		while (mst.size() < g.size()) { // When we have visited all vertices, we're done.
-			// do i have to get visited.size() here so it doesnt automatically increase below?
 			Edge<Integer> best = null;
 			for (int i = 0; i < visited.size(); i++) { // For all visited vertices, examine all edges.
 				try {
@@ -126,7 +125,7 @@ public class p10307 {
 					while (count < adj.size()) {
 						Edge<Integer> currentEdge = adj.get(count++);
 						if (!visited.contains(currentEdge.getChild()) && (best == null || currentEdge.weight < best.weight)) { // If the child vertex isn't already in the MST.
-							best = currentEdge; // Pick first best one.
+							best = currentEdge;
 						}
 					}
 				} catch (NoSuchElementException e) {
