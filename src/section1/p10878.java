@@ -4,6 +4,8 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+/* The input is a sequence of bytes. Each byte contains 8 bits.
+ * For the sample input, the first line corresponds to the value 1 + 64 = 65 which is an A in UTF-8/Unicode. */
 public class p10878 {
 
 	public static void main(String[] args) {
@@ -25,8 +27,6 @@ public class p10878 {
 	}
 	
 	private void run() {
-		/* The input is a sequence of bytes. Each byte contains 8 bits.
-		 * For the sample input, the first line corresponds to the value 1 + 64 = 65 which is an A in UTF-8/Unicode. */
 		BufferedReader stream = new BufferedReader(new InputStreamReader(System.in));
 		StringBuilder sb = new StringBuilder();
 		try {

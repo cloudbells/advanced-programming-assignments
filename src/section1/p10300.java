@@ -4,6 +4,9 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+/*
+ * Very straight-forward. The number of animals doesn't matter here so we simply multiply the farm size by the environment-friendliness variable.
+ */
 public class p10300 {
 	
 	public static void main(String[] args) {

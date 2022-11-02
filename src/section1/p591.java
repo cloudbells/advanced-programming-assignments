@@ -4,6 +4,9 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+/* Since it can be assumed that we will end up with n stacks in the end, we don't even need to distribute anything at all.
+ * We increment a counter by (stack size) - maxStack for each stack with a stack size bigger than maxStack.
+ * The result is the minimum number of moves needed to evenly stack all bricks in n stacks. */
 public class p591 {
 
 	public static void main(String[] args) {
@@ -26,9 +29,6 @@ public class p591 {
 					stacks[i] = Integer.parseInt(input[i]);
 					total += stacks[i];
 				}
-				/* Since it can be assumed that we will end up with n stacks in the end, we don't even need to distribute anything at all.
-				 * We increment a counter by (stack size) - maxStack for each stack with a stack size bigger than maxStack.
-				 * The result is the minimum number of moves needed to evenly stack all bricks in n stacks. */
 				// First, determine how high each stack should be. We can assume the total number of bricks is evenly divisible.
 				int maxStack = total / n;
 				int counter = 0;

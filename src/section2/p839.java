@@ -4,18 +4,21 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+/*
+ * This one was a ballache. The description is AWFUL:
+ * - It is NOT clear at all that you're supposed to only add the weights and not multiply by length to calculate weights.
+ * - It was NOT clear how the input was supposed to be read. "the following lines define the the sub-mobile"? This is ambiguous as hell.
+ * - In my mind, equilibrium simply meant whether the total weights (length * node weight) was the same on left as right at root, but apparently
+ *   it needs to also be an equilibrium in each subtree? Not clear at all. Overall, whoever made this assignment can go fuck themselves.
+ *   Picture a mobile that has a bunch of shitty submobiles that aren't balanced. If the total weight on the left of root is the same as the total
+ *   weight on the right of root, the mobile as a whole isn't wonky.
+ */
+
+/*
+ * Nevertheless, the idea here is to simply check if each subtree is in equilibrium, and if it is return the sum of weights W1 and W2 in this subtree. 
+ */
 public class p839 {
 
-	/*
-	 * This one was a ballache. The description is AWFUL:
-	 * - It is NOT clear at all that you're supposed to only add the weights and not multiply by length to calculate weights.
-	 * - It was NOT clear how the input was supposed to be read. "the following lines define the the sub-mobile"? This is ambiguous as hell.
-	 * - In my mind, equilibrium simply meant whether the total weights (length * node weight) was the same on left as right at root, but apparently
-	 *   it needs to also be an equilibrium in each subtree? Not clear at all. Overall, whoever made this assignment can go fuck themselves.
-	 *   Picture a mobile that has a bunch of shitty submobiles that aren't balanced. If the total weight on the left of root is the same as the total
-	 *   weight on the right of root, the mobile as a whole isn't wonky.
-	 */
-	
 	public static void main(String[] args) {
 		p839 obj = new p839();
 		obj.run();
@@ -23,7 +26,7 @@ public class p839 {
 	
 	BufferedReader stream;
 	
-	public void run() {
+	private void run() {
 		stream = new BufferedReader(new InputStreamReader(System.in));
 		try {
 			int nbrOfTests = Integer.parseInt(stream.readLine());

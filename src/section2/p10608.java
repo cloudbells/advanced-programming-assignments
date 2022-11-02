@@ -9,12 +9,18 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
+/*
+ * The idea is to run a DFS using every single unvisited vertex as a starting point in order to find all unconnected subgraphs.
+ * So, if G = (V, E) = ({A, B, C, D, E}, {A-B, C-D, D-E}) then we run a DFS from A to find that this friend group has a size of 2.
+ * Since we have now visited both A and B, we start a DFS from the next unvisited vertex (C) and find the size of this friend group
+ * to be 3 so we return 3.
+ */
 public class p10608 {
 
 	public static void main(String[] args) {
 		p10608 obj = new p10608();
 		obj.run();
-	}	
+	}
 	
 	private BufferedReader stream;
 	private List<Integer> visited;
@@ -54,6 +60,7 @@ public class p10608 {
 						break;
 					}
 				}
+				System.out.println(graph);
 				System.out.println(count);
 			}
 		} catch (IOException e) {
